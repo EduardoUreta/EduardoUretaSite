@@ -194,7 +194,7 @@
                     <h2 class="fw-bolder ">Algunos de mis proyectos</h2>
                     <p class="lead mb-0">A los clientes les encantó</p>
                 </div>
-                <div class="row gx-5 mb-5">
+                <div class="row justify-content-center mb-5">
                     <div class="row d-flex justify-content-evenly row-gap-4">
                         <div class="col-md-4 card">
                             <div class="card-body p-4 align-content-center">
@@ -241,27 +241,28 @@
                     </div>
                 </div>
 
+                <!-- Modal -->
                 <div class="modal fade" id="calculadoraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Calculadora Simple</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Calculadora Simple</h1>
+                                <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
                             </div>
                             <div class="modal-body">
                                 <form id="Calculadora">
-                                    <div class="mb-3">
-                                        <label for="numeroUno">Primer Número</label>
+                                    <div class="mb-3 text-warning">
+                                        <label for="numeroUno ">Primer Número</label>
                                         <input class="form-control" id="numeroUno" name="numeroUno" type="number" placeholder="Ingresa un número" required/>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 text-warning">
                                         <label for="numeroDos">Segundo Número</label>
                                         <input class="form-control" id="numeroDos" name="numeroDos" type="number" placeholder="Ingresa un número" required/>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 text-warning">
                                         <label for="operacionMatematica">Operación Matemática</label>
                                         <select class="form-select" id="operacionMatematica" name="operacionMatematica">
-                                            <option selected>Escoge una operación</option>
+                                            <option selected disabled>Escoge una operación</option>
                                             <option value="Sumar">Sumar</option>
                                             <option value="Restar">Restar</option>
                                             <option value="Multiplicar">Multiplicar</option>
@@ -276,7 +277,7 @@
                                         </div>
                                     </div>
                                     <div class="container text-end">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                         <button type="submit" class="btn btn-success" id="botonCalcular">Calcular</button>
                                     </div>
                                 </form>
