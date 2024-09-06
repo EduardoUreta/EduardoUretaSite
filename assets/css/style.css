@@ -366,6 +366,16 @@ nav * {
     }
   }
 
+@media (max-width:575px) {
+    .imagen-pequena{
+        max-width: 150px;
+    }
+    .card{
+        max-width: 200px;
+    }
+}
+
+
 footer {
     background-color: black;
 }
