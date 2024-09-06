@@ -119,10 +119,14 @@ nav * {
     }
 }
 
-@media (min-width: 771px) and (max-width: 990px){
+@media (min-width: 768px) and (max-width: 990px){
     #imagen-perfil{
         max-width: 390px;
         margin: auto;
+    }
+    #BotonVerTestimonioUno,
+    #BotonVerTestimonioDos{
+        font-size: 12px;
     }
 }
 
