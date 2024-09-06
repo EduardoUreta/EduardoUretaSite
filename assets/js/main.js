@@ -16,6 +16,7 @@ const navBar = document.getElementById("navbarText");
 const calculadora = document.getElementById("Calculadora");
 const botonCalcular = document.getElementById("botonCalcular");
 const resultado = document.getElementById("Resultado");
+const error = document.getElementById("Error");
 
 // Cerrar Menu Hamburguesa al apretar un enlance
 navLinks.forEach((link) => {
@@ -47,23 +48,38 @@ submitButton.addEventListener("click", (e) => {
 // Calculadora
 botonCalcular.addEventListener('click', (e) => {
     e.preventDefault();
-    resultado.classList.remove("d-none");
 
     const numeroUno = parseInt(document.getElementById("numeroUno").value);
     const numeroDos = parseInt(document.getElementById("numeroDos").value);
     const operacion = document.getElementById("operacionMatematica").value;
     const resultadoCalculo = document.getElementById("ResultadoCalculo");
+    const errorCalculo = document.getElementById("ErrorCalculo");
 
-    if (operacion === 'Sumar'){
+    if (isNaN(numeroUno) || isNaN(numeroDos)){
+        error.classList.remove("d-none");
+        resultado.classList.add("d-none");
+        errorCalculo.innerHTML = 'Debes ingresar ambos números'
+    } else if(operacion === 'Escoge una operación') {
+        error.classList.remove("d-none");
+        resultado.classList.add("d-none");
+        errorCalculo.innerHTML = `Debes ingresar una operación matemática`;
+    } else if (operacion === 'Sumar'){
+        error.classList.add("d-none");
+        resultado.classList.remove("d-none");
         resultadoCalculo.innerHTML = `El resultado es: ${numeroUno + numeroDos}`;
     } else if (operacion === 'Restar'){
+        error.classList.add("d-none");
+        resultado.classList.remove("d-none");
         resultadoCalculo.innerHTML = `El resultado es: ${numeroUno - numeroDos}`;
     } else if (operacion === 'Multiplicar'){
+        error.classList.add("d-none");
+        resultado.classList.remove("d-none");
         resultadoCalculo.innerHTML = `El resultado es: ${numeroUno * numeroDos}`;
     } else if (operacion === 'Dividir'){
+        error.classList.add("d-none");
+        resultado.classList.remove("d-none");
         resultadoCalculo.innerHTML = `El resultado es: ${numeroUno / numeroDos}`;
     }
     
-    calculadora.reset();
 });
 
