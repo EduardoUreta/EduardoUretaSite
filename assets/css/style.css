@@ -124,13 +124,17 @@ nav * {
         max-width: 390px;
         margin: auto;
     }
-    #BotonVerTestimonioUno,
-    #BotonVerTestimonioDos{
+    #BotonVerTestimonioUno h6,
+    #BotonVerTestimonioDos h6{
+        font-size: 12px !important;
+    }
+    #TestimonioUno,
+    #TestimonioDos{
         font-size: 12px;
     }
 }
 
-@media (min-width: 640px) and (max-width: 770px) {
+@media (min-width: 641px) and (max-width: 767px) {
     #SobreMi h1{
         font-size: 40px;
     }
