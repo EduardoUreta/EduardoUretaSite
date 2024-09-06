@@ -102,6 +102,12 @@ nav * {
     background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
+@media (min-width: 992px){
+    #SobreMi {
+        height: 450px;
+    }
+}
+
 @media (max-width: 991px) {
     #SobreMi .container{
         margin: auto;
@@ -113,9 +119,27 @@ nav * {
     }
 }
 
+@media (min-width: 771px) and (max-width: 990px){
+    #imagen-perfil{
+        max-width: 390px;
+        margin: auto;
+    }
+}
+
 @media (min-width: 640px) and (max-width: 770px) {
     #SobreMi h1{
         font-size: 40px;
+    }
+    #imagen-perfil{
+        max-width: 340px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 491px) and (max-width: 640px) {
+    #imagen-perfil{
+        max-width: 290px;
+        margin: auto;
     }
 }
 @media (max-width: 490px) {
