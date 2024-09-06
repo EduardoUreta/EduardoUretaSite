@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!-- Animate -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- AOS CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
         <!-- Link CSS Propio -->
         <link href="assets/css/style.css" rel="stylesheet" />
     </head>
@@ -50,78 +52,46 @@
           </nav>
 
         <!-- Sobre Mí Section-->
-        <section id="SobreMi" class="py-4 border-bottom">
-            <div class="container px-5 animate__backInDown animate__animated">
-                <div class="row gx-5" > 
-                    <div class="col-md-6 mt-5 order-md-2 order-sm-1 mb-5" style="padding-left: 35px;">
-                        <div class="text-center text-light">
-                            <img class="img-fluid rounded-circle border w-50" src="assets/img/eduardo.jpg" alt="Eduardo Ureta Campos"/>
-                            <div class="card mt-2 p-0">
-                                <div class="card-body">
-                                    <h5 class="card-title">Eduardo Enrique Ureta Campos</h5>
-                                    <ul class="list-unstyled text-start" >
-                                        <li class="d-flex align-items-start mb-2 descripcion" >
-                                            <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
-                                            <p >Ingeniero en Computación e Informática titulado en 2024 de la UNAB, Chile.</p>
-                                        </li>
-                                        <li class="d-flex align-items-start mb-2 descripcion">
-                                            <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
-                                            <p>Especializado en desarrollo web en JavaScript utilizando tecnologías tanto en Front End como en Back End.</p>
-                                        </li>
-                                        <li class="d-flex align-items-start mb-2 descripcion">
-                                            <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
-                                            <p>En contante capacitación, tanto en cursos guiados como de forma autodidacta, para ofrecer una mejor experiencia de usuario y asegurar un código limpio y eficiente.</p>
-                                        </li>
-                                        <li class="d-flex align-items-start descripcion">
-                                            <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
-                                            <p>Actualmente, cursando Bootcamp de JavaScript en Sence y Bootcamp de Python en programadores.org.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>                            
+        <section id="SobreMi" id="hero" class="hero section border-bottom">
+            <div class="container">
+                <div class="row gy-4 justify-content-center justify-content-lg-between">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-light">
+                        <h1 data-aos="fade-up">Eduardo Ureta Campos</h1>
+                        <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Ingeniero en Computación e Informática, UNAB.</p>
+                        
+                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <ul class="list-unstyled text-start">
+                                <li class="d-flex align-items-start mb-2 descripcion" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
+                                    <p>Especializado en desarrollo web en JavaScript utilizando tecnologías tanto en Front End como en Back End.</p>
+                                </li>
+                                <li class="d-flex align-items-start mb-2 descripcion" data-aos="fade-up" data-aos-delay="500">
+                                    <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
+                                    <p>En constante capacitación, tanto en cursos guiados como de forma autodidacta, para ofrecer una mejor experiencia de usuario y asegurar un código limpio y eficiente.</p>
+                                </li>
+                                <li class="d-flex align-items-start descripcion" data-aos="fade-up" data-aos-delay="600">
+                                    <i class="fas fa-check-circle me-2" style="color: #28a745;"></i>
+                                    <p>Actualmente, cursando Bootcamp de JavaScript en Sence y Bootcamp de Python en programadores.org.</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div id="carrusel" class="col-md-6 p-0 m-auto order-md-1 order-sm-2">
-                        <div id="carouselExampleIndicators" class="carousel slide">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./assets/img/slide1.jpg" class="d-block w-100 img-fluid" alt="slide-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./assets/img/slide2.jpg" class="d-block w-100 img-fluid" alt="slide-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./assets/img/slide3.jpg" class="d-block w-100 img-fluid" alt="slide-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                    
+                    <div class="col-lg-5 order-1 order-lg-2 hero-img d-flex align-items-center" data-aos="zoom-out">
+                        <img id="imagen-perfil" src="assets/img/eduardo.jpg" class="img-fluid animated rounded-circle border" alt="eduardo-ureta-campos">
                     </div>
                 </div>
             </div>
         </section>
-        
 
         <!-- Conocimientos-->
         <section id="Conocimientos" class="py-5 border-bottom text-center">
             <div class="container">
-                <div class="row justify-content-center animate__backInUp animate__animated mt-4">
+                <div class="row justify-content-center mt-4">
                     <div id="detalleDesarrollos" class="col-lg-6 p-2">
-                        <h1 class="text-light">Conocimientos</h1>
+                        <h1 class="text-light" data-aos="fade-up" data-aos-delay="100" >Conocimientos</h1>
                         <div class="text-light">
-                            <div>
+                            <div data-aos="fade-up-right" data-aos-delay="175">
                                 <h4>Desarrollo Front End</h4>
                                 <div class="d-flex justify-content-center flex-wrap">
                                     <span class="badge text-bg-secondary"><i class="fab fa-html5"></i> HTML</span>
@@ -133,7 +103,7 @@
                                 </div>
                             </div>
         
-                            <div class="mt-3">
+                            <div class="mt-3" data-aos="fade-up-left" data-aos-delay="250">
                                 <h4>Desarrollo Back End</h4>
                                 <div class="d-flex justify-content-center flex-wrap">
                                     <span class="badge text-bg-success"><i class="fab fa-node"></i> Node JS</span>
@@ -145,7 +115,7 @@
                                 </div>
                             </div>
         
-                            <div class="mt-3">
+                            <div class="mt-3" data-aos="fade-down-left" data-aos-delay="315">
                                 <h4>Bases de Datos</h4>
                                 <div class="d-flex justify-content-center flex-wrap">
                                     <span class="badge bg-light" style="color: rgb(71, 114, 255)"><i class="fas fa-database"></i> MySQL</span>
@@ -153,7 +123,7 @@
                                 </div>
                             </div>
         
-                            <div class="mt-3">
+                            <div class="mt-3" data-aos="fade-down-right" data-aos-delay="400">
                                 <h4>CMS</h4>
                                 <div class="d-flex justify-content-center flex-wrap">
                                     <span class="badge" style="background-color: blue; color: white"><i class="fab fa-wordpress"></i> WordPress</span>
@@ -164,7 +134,7 @@
                     </div>
         
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center align-self-center">
-                        <div class="card">
+                        <div class="card" data-aos="zoom-in" data-aos-delay="200">
                             <img src="./assets/img/codigo.jpg" class="card-img-top img-fluid" alt="Código fuente en JavaScript">
                             <div class="card-body">
                                 <h5 class="card-title">Ejemplo Código JS</h5>
@@ -174,7 +144,7 @@
                     </div>
                     
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center align-self-center">
-                        <div class="card">
+                        <div class="card" data-aos="zoom-in" data-aos-delay="300">
                             <img src="./assets/img/codigopy.webp" class="card-img-top img-fluid" alt="Código fuente en Python">
                             <div class="card-body">
                                 <h5 class="card-title">Ejemplo Código Python</h5>
@@ -190,13 +160,13 @@
         <!-- Proyectos section-->
         <section id="Proyectos" class="py-5 border-bottom">
             <div class="container px-5 my-5 px-5">
-                <div class="text-center mb-5 text-uppercase">
+                <div class="text-center mb-5 text-uppercase" data-aos="flip-up" data-aos-delay="100">
                     <h2 class="fw-bolder ">Algunos de mis proyectos</h2>
                     <p class="lead mb-0">A los clientes les encantó</p>
                 </div>
                 <div class="row justify-content-center mb-5">
                     <div class="row d-flex justify-content-evenly row-gap-4">
-                        <div class="col-md-4 card">
+                        <div class="col-md-4 card" data-aos="zoom-in" data-aos-delay="200">
                             <div class="card-body p-4 align-content-center">
                                 <div class="d-flex justify-content-center"> 
                                     <button id="BotonVerTestimonioUno">
@@ -211,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 card">
+                        <div class="col-md-4 card" data-aos="zoom-in" data-aos-delay="300">
                             <div class="card-body p-4 align-content-center">
                                 <div class="d-flex justify-content-center"> 
                                     <button id="BotonVerTestimonioDos">
@@ -228,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center row-gap-2">
+                <div class="row justify-content-center row-gap-2" data-aos="zoom-out" data-aos-delay="400">
                     <h4 class="text-center text-light text-uppercase">Pequeña Calculadora</h4>
                     <div class="col-md-4">
                         <div class="card-body align-content-center">
@@ -291,7 +261,7 @@
 
         <!-- Contacto section-->
         <section id="Contacto" class="bg-light py-5" style="background-color: #FFDEE9; background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);"> 
-            <div class="container px-5 my-5 px-5">
+            <div class="container px-5 my-5 px-5" data-aos="slide-up" data-aos-delay="150">
                 <div class="text-center mb-5">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
                     <h2 class="fw-bolder">¡Contáctame!</h2>
@@ -327,19 +297,45 @@
                         </form>
                     </div>
                 </div>
+                <div class="text-center mt-4">
+                    
+                </div>
             </div>
         </section>
         
         <!-- Footer-->
-        <footer class="py-4 bg-dark">
-            <div class="container px-5">
-                <p class="m-0 text-center text-white">
-                    Copyright &copy; Desarrollado por Eduardo Ureta
+        <footer class="py-3">
+            <div class="d-flex text-light justify-content-center">
+                <div class="text-center">
+                  <h4>Contacto</h4>
+                  <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:eduardo.uretaca@gmail.com" class="text-decoration-none text-light">
+                        <strong>Email:</strong> <span>eduardo.uretaca@gmail.com</span><br>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eduardo-ureta-campos/" target="_blank" class="text-decoration-none text-light">
+                        <i class="fab fa-linkedin text-light"></i><strong> LinkedIn: </strong><span>Eduardo Ureta Campos</span>  
+                    </a>
+                  </p>
+                </div>
+            </div>
+            <hr class="text-light"/>
+            <div class="container py-0">
+                <p class="m-0 text-center text-white small">
+                    Copyright &copy; 2024<br/>Desarrollado por <span class="text-danger">Eduardo Ureta Campos</span>
                 </p>
             </div>
         </footer>
 
+        <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- AOS JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <!-- Inicializar AOS -->
+        <script>
+            AOS.init();
+        </script>
+        <!-- JS Propio -->
         <script src="assets/js/main.js"></script>
 
     </body>

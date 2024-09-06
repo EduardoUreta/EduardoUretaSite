@@ -63,5 +63,7 @@ botonCalcular.addEventListener('click', (e) => {
     } else if (operacion === 'Dividir'){
         resultadoCalculo.innerHTML = `El resultado es: ${numeroUno / numeroDos}`;
     }
+    
+    calculadora.reset();
 });
 

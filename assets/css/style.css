@@ -43,49 +43,106 @@ nav * {
     }
 }
 
+.hero {
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  }
+  
+  .hero h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin: 5px 0 30px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (max-width: 640px) {
+    .hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .hero .btn-get-started,
+    .hero .btn-watch-video {
+      font-size: 13px;
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
 #SobreMi{
     background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
-@media (min-width: 1200px) {
-    #SobreMi .card{
-        height: 360px;
-    }
-}
-
 @media (max-width: 991px) {
-    #SobreMi .card{
-        height: 380px;
+    #SobreMi .container{
+        margin: auto;
+        text-align: center;
+    }
+    #imagen-perfil{
+        max-width: 450px;
+        margin: auto;
     }
 }
 
-@media (max-width: 767px) {
-    #SobreMi .card{
-        height: 420px;
+@media (min-width: 640px) and (max-width: 770px) {
+    #SobreMi h1{
+        font-size: 40px;
     }
 }
-@media (max-width: 461px) {
-    #SobreMi .card{
-        height: 460px;
-    }
+@media (max-width: 490px) {
     #SobreMi .descripcion{
         font-size: 15px;
+    }
+    #imagen-perfil{
+        max-width: 250px;
+        margin: auto;
     }
 }
 @media (max-width: 421px) {
-    #SobreMi .card{
-        height: 510px;
-    }
     #SobreMi .descripcion{
         font-size: 15px;
     }
+    #imagen-perfil{
+        max-width: 230px;
+        margin: auto;
+    }
 }
 @media (max-width: 396px) {
-    #SobreMi .card{
-        height: 400px;
-    }
     #SobreMi .descripcion{
         font-size: 11px;
+    }
+    #imagen-perfil{
+        max-width: 210px;
+        margin: auto;
     }
 }
 
@@ -276,3 +333,7 @@ nav * {
       background-position: 200% center;
     }
   }
+
+footer {
+    background-color: black;
+}
