@@ -18,6 +18,26 @@ const botonCalcular = document.getElementById("botonCalcular");
 const resultado = document.getElementById("Resultado");
 const error = document.getElementById("Error");
 
+const botonApi = document.getElementById("BotonApi");
+
+// Nav Translucido
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > 100) {  
+            nav.classList.add('nav-fondo-transparente');
+            nav.classList.remove('nav-fondo-negro');
+        } else {
+            nav.classList.add('nav-fondo-negro');
+            nav.classList.remove('nav-fondo-transparente');
+        }
+    });
+});
+
+
+
 // Cerrar Menu Hamburguesa al apretar un enlance
 navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -82,4 +102,18 @@ botonCalcular.addEventListener('click', (e) => {
     }
     
 });
+
+// Ver Consumo de Apis
+botonApi.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const divApis = document.getElementById('Apis');
+
+    if (divApis.classList.contains('d-none')) {
+        divApis.classList.remove("d-none");
+    } else {
+        divApis.classList.add("d-none");
+    };
+
+})
 

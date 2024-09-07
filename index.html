@@ -20,7 +20,7 @@
         <link href="assets/css/style.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark p-3 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 sticky-top nav-fondo-negro">
             <div class="container-fluid">
               <a class="navbar-brand neon-text" href="#!">
                 <img class="img-fluid" src="assets/img/icono-desarrollador.png" alt="icono-desarrollador"/>
@@ -49,13 +49,13 @@
                 </ul>
               </div>
             </div>
-          </nav>
+        </nav>
 
         <!-- Sobre Mí Section-->
-        <section id="SobreMi" id="hero" class="hero section border-bottom">
+        <section id="SobreMi" id="hero" class="hero section border-bottom nav-fondo-negro">
             <div class="container">
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-light">
+                    <div class="col-lg-6 order-2 order-lg-2 d-flex flex-column justify-content-center text-light">
                         <h1 data-aos="fade-up">Eduardo Ureta Campos</h1>
                         <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">
                             Ingeniero en Computación e Informática |
@@ -80,8 +80,8 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-5 order-1 order-lg-2 hero-img d-flex align-items-center" data-aos="zoom-out">
-                        <img id="imagen-perfil" src="assets/img/eduardo.jpg" class="img-fluid animated rounded-circle border" alt="eduardo-ureta-campos">
+                    <div class="col-lg-5 order-1 order-lg-1 hero-img d-flex align-items-center" data-aos="zoom-out">
+                        <img id="imagen-perfil" src="assets/img/eduardo.jpg" class="img-fluid animated border" alt="eduardo-ureta-campos">
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                 <div class="text-center mb-5 text-uppercase text-light" data-aos="flip-up" data-aos-delay="100">
                     <h2 class="fw-bolder ">Algunos de mis proyectos</h2>
                 </div>
-                <div class="row mb-4" data-aos="zoom-out" data-aos-delay="400">
+                <div class="row mb-4 row-gap-3" data-aos="zoom-out" data-aos-delay="400">
                     <div class="col-md-4 d-flex justify-content-center">
                         <div class="icon-box" data-bs-toggle="modal" data-bs-target="#calculadoraModal">
                             <i class="fa-solid fa-calculator"></i>
@@ -180,20 +180,29 @@
                         </div>
                     </div>
                     <div class="col-md-4 d-flex justify-content-center">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-calculator"></i>
-                            <h3>Calculadora</h3>
+                        <div id="BotonApi" class="icon-box">
+                            <div class="row">
+                                <div class="d-flex">
+                                    <i class="fa-regular fa-a me-2"></i>
+                                    <i class="fa-regular fa-p me-2"></i>
+                                    <i class="fa-regular fa-i"></i>
+                                </div>
+                            </div>
+                            <h3>Consumo</h3>
                         </div>
                     </div>
                 </div>
 
-                <div class="row justify-content-evenly row-gap-2" data-aos="zoom-out" data-aos-delay="500">
+                <div id="Apis" class="row justify-content-evenly row-gap-2 d-none mt-5" data-aos="zoom-out" data-aos-delay="500">
+                    <h4 class="text-center text-light text-uppercase">Acceder a datos proporcionados por una API de:</h4>
                     <div class="col-md-4">
-                        <div class="align-content-center">
-                            <h4 class="text-center text-light text-uppercase">Consumo de API</h4>
+                        <div class="align-content-center text-center">
                             <div class="d-flex justify-content-center"> 
-                                <a href="rickyMortyApi.html"><img src="assets/img/rickMorty.jpg" class="img-fluid rounded-circle border"/></a>
+                                <a href="rickyMortyApi.html">
+                                    <img src="assets/img/rickMorty.jpg" class="img-fluid rounded-circle border w-75"/>
+                                </a>
                             </div>
+                            <h6 class="text-decoration-none text-center text-light">Rick y Morty</h6>
                         </div>
                     </div>
                 </div>
@@ -350,7 +359,7 @@
         </section>
         
         <!-- Footer-->
-        <footer class="py-3">
+        <footer class="py-2">
             <div class="d-flex text-light justify-content-center">
                 <div class="text-center">
                   <h4>Contacto</h4>
@@ -365,7 +374,7 @@
                   </p>
                 </div>
             </div>
-            <hr class="text-light"/>
+            <hr class="text-light m-0"/>
             <div class="container py-0">
                 <p class="m-0 text-center text-white small">
                     Copyright &copy; 2024<br/>Desarrollado por <span class="text-danger">Eduardo Ureta Campos</span>
@@ -384,8 +393,8 @@
         <!-- Typed Js -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <!-- JS Propio -->
-        <script src="assets/js/main.js"></script>
         <script src="assets/js/typed.js"></script>
+        <script src="assets/js/main.js"></script>
 
     </body>
 </html>

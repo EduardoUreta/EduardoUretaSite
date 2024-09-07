@@ -1,14 +1,14 @@
-nav {
-    background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-}
-
 nav * {
     color: white !important;
 }
 
+nav {
+  background-color: black;
+}
+
 .navbar-brand:hover,
 .nav-link:hover {
-    color: rgb(176, 161, 51) !important;
+    color:rgba(210, 210, 43, 0.779) !important;
 }
 
 @media (max-width: 471px){
@@ -20,9 +20,20 @@ nav * {
     }
 }
 
+.nav-fondo-negro {
+  background-color: #000000;
+}
+
+.nav-fondo-transparente {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .neon-text {
-    color: #ffffff;
-    text-shadow: 0 0 5px #ff77ff, 0 0 15px #ff77ff, 0 0 30px #ff007f, 0 0 60px #ff007f;
+  color: #ffffff;
+  text-shadow: 
+      0 0 2px rgba(210, 210, 43, 0.779), 
+      0 0 5px rgba(210, 210, 43, 0.779),   
+      0 0 10px rgba(210, 210, 43, 0.5);    
 }
 
 .neon-text:hover{
@@ -103,13 +114,21 @@ nav * {
 }
 
 #SobreMi{
-    background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-image: url('/assets/img/fondo-inicio.png');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px){
     #SobreMi {
         height: 550px;
     }
+    #imagen-perfil{
+      max-width: 350px;
+      margin: auto;
+  }
 }
 
 @media (max-width: 991px) {
@@ -118,7 +137,7 @@ nav * {
         text-align: center;
     }
     #imagen-perfil{
-        max-width: 450px;
+        max-width: 350px;
         margin: auto;
     }
 }
