@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#SobreMi">Sobre Mí</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#Conocimientos">Conocimientos</a>
+                    <a class="nav-link" href="#Habilidades">Habilidades</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#Proyectos">Proyectos</a>
@@ -57,7 +57,10 @@
                 <div class="row gy-4 justify-content-center justify-content-lg-between">
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-light">
                         <h1 data-aos="fade-up">Eduardo Ureta Campos</h1>
-                        <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">Ingeniero en Computación e Informática, UNAB.</p>
+                        <p class="text-secondary" data-aos="fade-up" data-aos-delay="100">
+                            Ingeniero en Computación e Informática |
+                            <span class="typed" data-typed-items="Web Developer, Freelancer, Web Designer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+                        </p>
                         
                         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                             <ul class="list-unstyled text-start">
@@ -84,12 +87,12 @@
             </div>
         </section>
 
-        <!-- Conocimientos-->
-        <section id="Conocimientos" class="py-5 border-bottom text-center">
+        <!-- Habilidades-->
+        <section id="Habilidades" class="py-5 border-bottom text-center">
             <div class="container">
                 <div class="row justify-content-center mt-4">
                     <div id="detalleDesarrollos" class="col-lg-6 p-2">
-                        <h1 class="text-light" data-aos="fade-up" data-aos-delay="100" >Conocimientos</h1>
+                        <h1 class="text-light" data-aos="fade-up" data-aos-delay="100" >Habilidades</h1>
                         <div class="text-light">
                             <div data-aos="fade-up-right" data-aos-delay="175">
                                 <h4>Desarrollo Front End</h4>
@@ -160,53 +163,26 @@
         <!-- Proyectos section-->
         <section id="Proyectos" class="py-5 border-bottom">
             <div class="container px-5 my-5 px-5">
-                <div class="text-center mb-5 text-uppercase" data-aos="flip-up" data-aos-delay="100">
+                <div class="text-center mb-5 text-uppercase text-light" data-aos="flip-up" data-aos-delay="100">
                     <h2 class="fw-bolder ">Algunos de mis proyectos</h2>
-                    <p class="lead mb-0">A los clientes les encantó</p>
                 </div>
-                <div class="row justify-content-center mb-5">
-                    <div class="row d-flex justify-content-evenly row-gap-4">
-                        <div class="col-md-4 card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="card-body p-1 align-content-center">
-                                <div class="d-flex justify-content-center"> 
-                                    <button id="BotonVerTestimonioUno" class="align-content-center">
-                                        <h6 class="m-0">Testimonio <br/> Reto Total</h6>
-                                    </button>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="ms-4">
-                                        <p id="TestimonioUno" class="mb-1"></p>
-                                        <div id="RetoTotal" class="small text-muted text-end"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 card" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="card-body p-1 align-content-center">
-                                <div class="d-flex justify-content-center"> 
-                                    <button id="BotonVerTestimonioDos">
-                                        <h6 class="m-0">Testimonio <br/> Rehabilita Santiago</h6>
-                                    </button>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="ms-4">
-                                        <p id="TestimonioDos" class="mb-1"></p>
-                                        <div id="RehabilitaSantiago" class="small text-muted text-end"></div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row mb-4" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="icon-box" data-bs-toggle="modal" data-bs-target="#calculadoraModal">
+                            <i class="fa-solid fa-calculator"></i>
+                            <h3>Calculadora</h3>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-evenly row-gap-2 mb-4" data-aos="zoom-out" data-aos-delay="400">
-                    <div class="col-md-4">
-                        <div class="align-content-center">
-                            <h4 class="text-center text-light text-uppercase">Pequeña Calculadora</h4>
-                            <div class="d-flex justify-content-center"> 
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#calculadoraModal" style="background-color: transparent; border: none;">
-                                    <img src="assets/img/calculadora.png" class="img-fluid" />
-                                </button>
-                            </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="icon-box" data-bs-toggle="modal" data-bs-target="#sitiosWebsModal">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Sitios Webs</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-calculator"></i>
+                            <h3>Calculadora</h3>
                         </div>
                     </div>
                 </div>
@@ -222,7 +198,7 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
+                <!-- Modal Calculadora-->
                 <div class="modal fade" id="calculadoraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -274,6 +250,58 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Sitios Webs-->
+                <div class="modal fade" id="sitiosWebsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Sitios Webs</h1>
+                                <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row d-flex justify-content-center">
+                                    <div data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="card-body p-1 align-content-center">
+                                            <div class="d-flex justify-content-center"> 
+                                                <button id="BotonVerTestimonioUno" class="align-content-center">
+                                                    <h6 class="m-0">Reto Total</h6>
+                                                </button>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="ms-4">
+                                                    <p id="TestimonioUno" class="mb-1 text-light"></p>
+                                                    <div id="RetoTotal" class="small text-end"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div>
+                                        <div data-aos="zoom-in" data-aos-delay="300">
+                                            <div class="card-body p-1 align-content-center">
+                                                <div class="d-flex justify-content-center">
+                                                    <button id="BotonVerTestimonioDos">
+                                                        <h6 class="m-0">Rehabilita Santiago</h6>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="ms-4">
+                                                        <p id="TestimonioDos" class="mb-1 text-light"></p>
+                                                        <div id="RehabilitaSantiago" class="small  text-end"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -353,8 +381,11 @@
         <script>
             AOS.init();
         </script>
+        <!-- Typed Js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <!-- JS Propio -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/typed.js"></script>
 
     </body>
 </html>

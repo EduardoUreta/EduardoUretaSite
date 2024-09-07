@@ -98,6 +98,10 @@ nav * {
     }
   }
 
+.typed{
+    border-bottom: 1px solid gray;
+}
+
 #SobreMi{
     background: #0f0c29; background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
@@ -224,31 +228,35 @@ nav * {
     margin: 3px;
 }
 
-#Conocimientos {
+#Habilidades {
     background-color: #cac5c5;
     background-image: linear-gradient(249deg, #cac5c5 0%, #323236 50%, #000000 100%);
 }
 
-#Conocimientos .card {
+#Habilidades .card {
     width: 100%;
     max-width: 300px;
 }
 
 @media (min-width: 768px) {
-    #Conocimientos .card{
+    #Habilidades .card{
         max-height: 370px;
     }
 }
 
-#Proyectos{
-    background-color: #21D4FD; background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+#Proyectos {
+    background-image: url('/assets/img/programacion-fondo.png');
+    background-size: cover;        
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #Proyectos .card{
     height: 245px;
 }
 
-#BotonVerTestimonioUno,
+/* #BotonVerTestimonioUno,
 #BotonVerTestimonioDos {
     position: relative;
     padding: 10px 20px;
@@ -325,6 +333,59 @@ nav * {
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
+  } */
+
+  .icon-box,
+  #BotonVerTestimonioUno,
+  #BotonVerTestimonioDos {
+    padding: 40px;
+    transition: ease-in-out 0.3s;
+    border: 1px solid rgb(53, 52, 52);
+    border-radius: 10px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon-box i {
+    font-size: 32px;
+    line-height: 1;
+    color: white;
+  }
+  
+  .icon-box h3,
+  #BotonVerTestimonioUno h6,
+  #BotonVerTestimonioDos h6{
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .icon-box h3,
+  #BotonVerTestimonioUno h6,
+  #BotonVerTestimonioDos h6{
+    color: white;
+  }
+  
+  .icon-box:hover,
+  #BotonVerTestimonioUno:hover,
+  #BotonVerTestimonioDos:hover {
+    border-color: rgba(210, 210, 43, 0.779);
+  }
+  
+  .icon-box:hover h3,
+  .icon-box:hover i ,
+  #BotonVerTestimonioUno:hover h6,
+  #BotonVerTestimonioDos:hover h6{
+    color: #ffc451;
   }
 
   .fade {
