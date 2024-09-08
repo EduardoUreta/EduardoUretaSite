@@ -1,3 +1,8 @@
+
+body {
+  overflow-x: hidden;
+}
+
 nav * {
     color: white !important;
 }
@@ -52,6 +57,10 @@ nav {
         justify-content: end !important;
         padding-right: 45px;
     }
+}
+
+#imagen-perfil{
+  filter: grayscale(100%);
 }
 
 .hero {
@@ -122,12 +131,15 @@ nav {
 }
 
 @media (min-width: 992px){
-    #SobreMi {
-        height: 550px;
-    }
-    #imagen-perfil{
-      max-width: 350px;
-      margin: auto;
+  #SobreMi {
+      height: 425px;
+  }
+  #imagen-perfil{
+    max-width: 350px;
+    margin: auto;
+  }
+  #SobreMi .descripcion{
+    font-size: 17px;
   }
 }
 
@@ -155,11 +167,17 @@ nav {
     #TestimonioDos{
         font-size: 12px;
     }
+    #SobreMi .descripcion{
+      font-size: 15px;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 767px) {
     #SobreMi h1{
         font-size: 40px;
+    }
+    #SobreMi .descripcion{
+      font-size: 15px;
     }
     #imagen-perfil{
         max-width: 340px;
@@ -168,6 +186,9 @@ nav {
 }
 
 @media (min-width: 491px) and (max-width: 640px) {
+    #SobreMi .descripcion{
+      font-size: 15px;
+    }
     #imagen-perfil{
         max-width: 290px;
         margin: auto;
