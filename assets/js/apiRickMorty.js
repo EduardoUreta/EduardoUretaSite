@@ -9,7 +9,7 @@ fetch('https://rickandmortyapi.com/api/character')
         const divPersonajes = document.getElementById("Personajes");
         
         const personajesHTML = personajeRickMorty.map(personaje => {
-            return `<div class="col-lg-3 col-md-3 col-sm-4 card text-center mt-5">
+            return `<div class="col-lg-3 col-md-3 col-sm-4 card text-center mt-5 animate__animated">
                         <img id="${personaje.id}" class="img-fluid m-auto imagen-pequena" src="${personaje.image}" alt="${personaje.image}"></img>
                         <h4>${personaje.name}</h4>
                         <h6>Aparece en: ${personaje.episode.length > 1 ? `${personaje.episode.length} capitulos` : `${personaje.episode.length} capitulo`} </h6>

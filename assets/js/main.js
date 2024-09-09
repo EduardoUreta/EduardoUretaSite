@@ -111,9 +111,16 @@ botonApi.addEventListener('click', (e) => {
 
     if (divApis.classList.contains('d-none')) {
         divApis.classList.remove("d-none");
+        divApis.classList.remove("animate__bounceOut");
+        divApis.classList.add("animate__bounceIn");
     } else {
-        divApis.classList.add("d-none");
-    };
+        divApis.classList.remove("animate__bounceIn");
+        divApis.classList.add("animate__bounceOut");
 
-})
+        setTimeout(() => {
+            divApis.classList.add("d-none");
+        }, 1000);
+    }
+});
+
 
