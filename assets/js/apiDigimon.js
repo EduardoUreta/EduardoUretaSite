@@ -70,8 +70,8 @@ const actualizarPersonajes = (personajesOrdenados) => {
     const personajesHTML = personajesOrdenados.map(personaje => {
         return `<div class="col-lg-3 col-md-3 col-sm-4 text-center mt-5 animate__animated">
                     <img class="img-fluid img-thumbnail" src="${personaje.img}"/>
-                    <h4 class="text-warning">${personaje.name}</h4>
-                    <h6 class="text-light">Nivel: ${
+                    <h4 class="text-warning ">${personaje.name}</h4>
+                    <h6 class="text-light ">Nivel: ${
                         personaje.level == 'In Training' ? 'En Entrenamiento' :
                         personaje.level == 'Training' ? 'En Entrenamiento' :
                         personaje.level == 'Rookie' ? 'Novato' :

@@ -10,15 +10,15 @@ fetch('https://rickandmortyapi.com/api/character')
         
         const personajesHTML = personajeRickMorty.map(personaje => {
             return `<div class="col-lg-3 col-md-3 col-sm-4 card text-center mt-5 animate__animated">
-                        <img id="${personaje.id}" class="img-fluid m-auto imagen-pequena" src="${personaje.image}" alt="${personaje.image}"></img>
-                        <h4>${personaje.name}</h4>
-                        <h6>Aparece en: ${personaje.episode.length > 1 ? `${personaje.episode.length} capitulos` : `${personaje.episode.length} capitulo`} </h6>
-                        <h6>Género: ${
+                        <img id="${personaje.id}" class="img-fluid m-auto imagen-pequena mt-2 mb-1" src="${personaje.image}" alt="${personaje.image}"></img>
+                        <h4>${personaje.name}</h4><br/>
+                        <h6 class="text-light">Género: ${
                             personaje.gender == 'Male' ? 'Hombre' :
                             personaje.gender == 'Female' ? 'Mujer' :
                             personaje.gender
                         }</h6>
-                        <h6 class="text-end">Estado: 
+                        <h6 class="text-light">Aparece en: ${personaje.episode.length > 1 ? `${personaje.episode.length} capitulos` : `${personaje.episode.length} capitulo`} </h6>
+                        <h6 class="text-end text-light">Estado: 
                             ${ 
                                 personaje.status == 'Alive' ? '<button class="btn btn-success p-1">Vivo</button>' : 
                                 personaje.status == 'Dead' ? '<button class="btn btn-danger p-1">Muerto</button>' : 
