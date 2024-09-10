@@ -365,7 +365,7 @@ nav {
     .imagen-pequena{
         max-width: 150px;
     }
-    .card{
+    #Digimon .card{
         max-width: 200px;
     }
 }
@@ -394,6 +394,18 @@ footer {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 575px){
+  #Digimon h4{
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 333px){
+  #Digimon h4{
+    font-size: 16px !important;
+  }
+}
+
 /* Rick & Morty */
 @font-face {
   font-family: 'RickMortyFont';
@@ -413,12 +425,92 @@ footer {
 }
 
 #RickMorty .card {
-  background-color: black;
+  background-color: transparent;
 }
-#RickMorty h4 {
+
+#RickMorty h4,
+#RickMorty h1 {
   color: #00BFFF;
   text-shadow: 
     1px 1px 0 #39FF14,  
     2px 2px 0 #39FF14,  
     2px 2px 3px rgba(57, 255, 20, 0.3); 
+}
+#RickMorty .card{
+  border: none;
+}
+
+#RickMorty .license-card {
+    width: 100%;
+    max-width: 400px;
+    background-image: url('/assets/img/fondoLicenciaRickMorty.png');
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #000;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #333;
+    overflow: hidden;
+    margin: auto;
+}
+
+#RickMorty .card-header {
+    background-color: #2a8b18;
+    color: #00BFFF;
+    text-shadow: 1px 1px 2px #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+#RickMorty .photo {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #000;
+}
+
+@media (max-width: 767px){
+  #RickMorty .photo {
+      width: 140px;
+  }
+}
+
+#RickMorty .info-section .info-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#RickMorty .info-group label {
+    font-weight: bolder;
+    color: #003366;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+#RickMorty .info-group span {
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+#RickMorty .card-footer {
+    background-color: #1b1c23;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#RickMorty .footer-info p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+#RickMorty .barcode {
+    margin-left: 20px;
 }

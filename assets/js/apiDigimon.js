@@ -7,6 +7,7 @@ const options = {
 let personajes = [];
 let personajesOrdenados = [];
 
+// Obtener Digimons
 const getCharacterList = async () => {
 	try {
 		const response = await fetch(url, options);
@@ -64,13 +65,14 @@ const getCharacterList = async () => {
 
 getCharacterList();
 
+// Actualizar Digimons
 const actualizarPersonajes = (personajesOrdenados) => {
     const divPersonajes = document.getElementById("PersonajesDigimon");
 
     const personajesHTML = personajesOrdenados.map(personaje => {
         return `<div class="col-lg-3 col-md-3 col-sm-4 text-center mt-5 animate__animated">
                     <img class="img-fluid img-thumbnail" src="${personaje.img}"/>
-                    <h4 class="text-warning ">${personaje.name}</h4>
+                    <h4 id="${personaje.name}" class="text-warning ">${personaje.name}</h4>
                     <h6 class="text-light ">Nivel: ${
                         personaje.level == 'In Training' ? 'En Entrenamiento' :
                         personaje.level == 'Training' ? 'En Entrenamiento' :
@@ -85,6 +87,14 @@ const actualizarPersonajes = (personajesOrdenados) => {
     }).join('');
 
     divPersonajes.innerHTML = personajesHTML;
+
+    // Ajustar tamaño de fuente
+    personajesOrdenados.forEach(personaje => {
+        const nombreDigimonId = document.getElementById(personaje.name);
+        if (nombreDigimonId && personaje.name.length > 10) {
+            nombreDigimonId.style.fontSize = '10px';
+        }
+    });
 };
 
 // Buscar Digimon
@@ -111,7 +121,7 @@ nombreDigimon.addEventListener('input', (e) => {
     const personajesHTML = digimonEncontrado.map(personaje => {
         return `<div class="col-lg-3 col-md-3 col-sm-4 text-center mt-5 animate__animated">
                     <img class="img-fluid img-thumbnail" src="${personaje.img}"/>
-                    <h4 class="text-warning">${personaje.name}</h4>
+                    <h4 id="${personaje.name}" class="text-warning">${personaje.name}</h4>
                     <h6 class="text-light">Nivel: ${
                         personaje.level == 'In Training' ? 'En Entrenamiento' :
                         personaje.level == 'Training' ? 'En Entrenamiento' :
@@ -126,4 +136,12 @@ nombreDigimon.addEventListener('input', (e) => {
     }).join('');
 
     divPersonajes.innerHTML = personajesHTML;
+
+    // Ajustar tamaño de fuente en la búsqueda
+    digimonEncontrado.forEach(personaje => {
+        const nombreDigimonId = document.getElementById(personaje.name);
+        if (nombreDigimonId && personaje.name.length > 10) {
+            nombreDigimonId.style.fontSize = '12px';
+        }
+    });
 });
