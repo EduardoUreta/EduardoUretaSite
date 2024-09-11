@@ -11,6 +11,12 @@ nav {
   background-color: black;
 }
 
+nav img {
+  border-radius: 25px;
+  max-width: 25px !important;
+  margin-right: 5px !important;
+}
+
 .navbar-brand:hover,
 .nav-link:hover {
     color:rgba(210, 210, 43, 0.779) !important;
