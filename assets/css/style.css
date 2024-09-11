@@ -536,3 +536,26 @@ footer {
   width: 250px;
   margin: auto;
 }
+
+/* Sismos */
+#Sismos{
+  background-image: url('/assets/img/sismologia.png');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 450px){
+  #MostrarSismos,
+  #MostrarSismos h6{
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 334px){
+  #MostrarSismos,
+  #MostrarSismos h6{
+    font-size: 9px !important;
+  }
+}
