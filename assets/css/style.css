@@ -274,18 +274,18 @@ nav img {
     margin: 3px;
 }
 
-#Habilidades {
+#Tecnologias {
     background-color: #cac5c5;
     background-image: linear-gradient(249deg, #cac5c5 0%, #323236 50%, #000000 100%);
 }
 
-#Habilidades .card {
+#Tecnologias .card {
     width: 100%;
     max-width: 300px;
 }
 
 @media (min-width: 768px) {
-    #Habilidades .card{
+    #Tecnologias .card{
         max-height: 370px;
     }
 }
@@ -366,6 +366,22 @@ nav img {
     background-color: black;
   }
   
+#Insignias{
+  background-image: url('/assets/img/fondoInsignias.jpg');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.relleno iframe {
+  background: #C9D6FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 1px solid #ffffff;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.35);
+} 
 
 @media (max-width:575px) {
     .imagen-pequena{
