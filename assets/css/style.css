@@ -581,3 +581,30 @@ footer {
     font-size: 9px !important;
   }
 }
+
+/* Burbuja Carrito */
+#burbujaCarrito{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fbfbfb;
+  width: 60px;
+  height: 60px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#burbujaCarrito i {
+  font-size: 27px;
+  color: black;
+}
+
+#burbujaCarrito:hover{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}

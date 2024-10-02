@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "nombre": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "categoria": "men's clothing",
+        "descripcion": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "precio": 109.95,
+        "imagen": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "valoracion": 3.9
+    },
+    {
+        "id": 2,
+        "nombre": "Mens Casual Premium Slim Fit T-Shirts",
+        "categoria": "men's clothing",
+        "descripcion": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
+        "precio": 22.3,
+        "imagen": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        "valoracion": 4.1
+    },
+    {
+        "id": 3,
+        "nombre": "Mens Cotton Jacket",
+        "categoria": "men's clothing",
+        "descripcion": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling.",
+        "precio": 55.99,
+        "imagen": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        "valoracion": 4.7
+    },
+    {
+        "id": 4,
+        "nombre": "Mens Casual Slim Fit",
+        "categoria": "men's clothing",
+        "descripcion": "The color could be slightly different between on the screen and in practice.",
+        "precio": 15.99,
+        "imagen": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        "valoracion": 2.1
+    },
+    {
+        "id": 5,
+        "nombre": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "categoria": "jewelery",
+        "descripcion": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl.",
+        "precio": 695,
+        "imagen": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "valoracion": 4.6
+    },
+    {
+        "id": 6,
+        "nombre": "Solid Gold Petite Micropave",
+        "categoria": "jewelery",
+        "descripcion": "Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "precio": 168,
+        "imagen": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "valoracion": 3.9
+    },
+    {
+        "id": 7,
+        "nombre": "White Gold Plated Princess",
+        "categoria": "jewelery",
+        "descripcion": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her.",
+        "precio": 9.99,
+        "imagen": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        "valoracion": 3
+    },
+    {
+        "id": 8,
+        "nombre": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "categoria": "jewelery",
+        "descripcion": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel.",
+        "precio": 10.99,
+        "imagen": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+        "valoracion": 1.9
+    },
+    {
+        "id": 9,
+        "nombre": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+        "categoria": "electronics",
+        "descripcion": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity.",
+        "precio": 64,
+        "imagen": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+        "valoracion": 3.3
+    },
+    {
+        "id": 10,
+        "nombre": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "categoria": "electronics",
+        "descripcion": "Easy upgrade for faster boot up, shutdown, application load and response.",
+        "precio": 109,
+        "imagen": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+        "valoracion": 2.9
+    },
+    {
+        "id": 11,
+        "nombre": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "categoria": "electronics",
+        "descripcion": "3D NAND flash are applied to deliver high transfer speeds.",
+        "precio": 109,
+        "imagen": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+        "valoracion": 4.8
+    },
+    {
+        "id": 12,
+        "nombre": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+        "categoria": "electronics",
+        "descripcion": "Expand your PS4 gaming experience, Play anywhere.",
+        "precio": 114,
+        "imagen": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        "valoracion": 4.8
+    },
+    {
+        "id": 13,
+        "nombre": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+        "categoria": "electronics",
+        "descripcion": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display.",
+        "precio": 599,
+        "imagen": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        "valoracion": 2.9
+    },
+    {
+        "id": 14,
+        "nombre": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA)",
+        "categoria": "electronics",
+        "descripcion": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR.",
+        "precio": 999.99,
+        "imagen": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        "valoracion": 2.2
+    },
+    {
+        "id": 15,
+        "nombre": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "categoria": "women's clothing",
+        "descripcion": "Note: The Jackets is US standard size.",
+        "precio": 56.99,
+        "imagen": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "valoracion": 2.6
+    },
+    {
+        "id": 16,
+        "nombre": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+        "categoria": "women's clothing",
+        "descripcion": "100% POLYURETHANE(shell) 100% POLYESTER(lining).",
+        "precio": 29.95,
+        "imagen": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+        "valoracion": 2.9
+    },
+    {
+        "id": 17,
+        "nombre": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+        "categoria": "women's clothing",
+        "descripcion": "Lightweight perfect for trip or casual wear.",
+        "precio": 39.99,
+        "imagen": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+        "valoracion": 3.8
+    },
+    {
+        "id": 18,
+        "nombre": "MBJ Women's Solid Short Sleeve Boat Neck V",
+        "categoria": "women's clothing",
+        "descripcion": "95% RAYON 5% SPANDEX, Made in USA or Imported.",
+        "precio": 9.85,
+        "imagen": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+        "valoracion": 4.7
+    }
+]
