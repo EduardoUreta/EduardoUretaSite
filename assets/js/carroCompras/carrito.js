@@ -5,6 +5,7 @@ import { acortarTitulo } from './acortarInformacion.js';
 import { Carritos } from './Carritos.js';
 import { burbujaCarrito } from './burbujaCarrito.js';
 
+// Catálogo
 const mostarProductos = document.getElementById("mostarProductos");
 
 let carrito = [];
@@ -63,10 +64,10 @@ obtenerProductos()
                             confirmButtonColor: '#337c3f'
                         });
                         Toastify({
-                            text: `Llevas ${carrito.contarTotalProductos()} producto`,
+                            text: `¡Agregaste un producto!`,
                             duration: 3000,
                             close: true,
-                            gravity: "top",
+                            gravity: "bottom",
                             position: "right",
                             stopOnFocus: true,
                             style: {
@@ -84,10 +85,10 @@ obtenerProductos()
                             confirmButtonColor: '#337c3f'
                         });
                         Toastify({
-                            text: `Llevas ${carrito.contarTotalProductos()} productos`,
+                            text: `¡Agregaste un producto!`,
                             duration: 3000,
                             close: true,
-                            gravity: "top",
+                            gravity: "bottom",
                             position: "right",
                             stopOnFocus: true,
                             style: {
