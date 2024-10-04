@@ -17,8 +17,8 @@ nav img {
   margin-right: 5px !important;
 }
 
-.navbar-brand:hover,
-.nav-link:hover {
+nav .navbar-brand:hover,
+nav .nav-link:hover {
     color:rgba(210, 210, 43, 0.779) !important;
 }
 
@@ -607,4 +607,51 @@ footer {
 #burbujaCarrito:hover{
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
+}
+
+#Indicadores{
+  background-image: url('/assets/img/fondoIndicadores.png');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* API Indicadores */
+#dolar-pesos{
+  background-color: white;
+  color: green;
+  font-weight: 700;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+#euro-pesos{
+  background-color: blue;
+  color: gold;
+  font-weight: 700;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+#uf-pesos{
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+#utm-pesos{
+  background-color: green;
+  color: white;
+  font-weight: 700;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+#dolar-pesos:hover,
+#euro-pesos:hover,
+#uf-pesos:hover,
+#utm-pesos:hover{
+  transform: scale(1.15);
 }
