@@ -4,34 +4,29 @@ const ufTab = document.getElementById("uf-pesos");
 const utmTab = document.getElementById("utm-pesos");
 
 let ctx = document.getElementById("ChartDolar");
-let valor = 'dolar';
 let chart = null;
 
 dolarTab.addEventListener('click', () => {
-    valor = 'dolar';
     ctx = document.getElementById("ChartDolar");
-    indicadoresApi();
+    indicadoresApi('dolar');
 });
 
 euroTab.addEventListener('click', () => {
-    valor = 'euro';
     ctx = document.getElementById("ChartEuro");
-    indicadoresApi();
+    indicadoresApi('euro');
 });
 
 ufTab.addEventListener('click', () => {
-    valor = 'uf';
     ctx = document.getElementById("ChartUF");
-    indicadoresApi();
+    indicadoresApi('uf');
 });
 
 utmTab.addEventListener('click', () => {
-    valor = 'utm';
     ctx = document.getElementById("ChartUTM");
-    indicadoresApi();
+    indicadoresApi('utm');
 });
 
-export const indicadoresApi = async() => {
+export const indicadoresApi = async(valor = 'dolar') => {
     try {
         const obtenerDatos = await fetch(`https://mindicador.cl/api/${valor}`, {
             method: "GET"
@@ -45,6 +40,7 @@ export const indicadoresApi = async() => {
 
 const actualizarGrafico = (data) => {
     const {codigo, unidad_medida, serie} = data;
+    serie.reverse();
 
     const arrayFecha = serie.map(dato => {
         const {fecha} = dato;
@@ -78,31 +74,46 @@ const actualizarGrafico = (data) => {
             scales: {
                 x: {
                     ticks: {
-                        color: '#f0f8ff', // Cambia el color de la fuente del eje X
+                        color: '#f0f8ff', 
                     }
                 },
                 y: {
                     ticks: {
-                        color: '#f0f8ff', // Cambia el color de la fuente del eje Y
+                        color: '#f0f8ff', 
                     }
                 }
             },
             plugins: {
                 legend: {
                     labels: {
-                        color: '#f0f8ff', // Cambia el color de la fuente de la leyenda
+                        color: '#f0f8ff',
                     }
                 },
                 title: {
                     display: true,
                     text: (codigo == 'utm') ? 'Últimos 16 periodos'.toUpperCase() :
                          (codigo == 'uf') ? 'Últimos 30 días'.toUpperCase() : 'Últimos 31 días hábiles'.toUpperCase(),
-                    color: '#f0f8ff', // Cambia el color de la fuente del título
+                    color: '#f0f8ff',
                 }
             }
         }
     }); 
+  
+    let chart2 = new CanvasJS.Chart("chartContainer", {
+        title:{
+            text:`${(codigo == 'utm') ? `${codigo.slice(0,3).toUpperCase()} a ${unidad_medida}` : 
+                      (codigo == 'uf') ? `${codigo.slice(0,2).toUpperCase()} a ${unidad_medida}` : `${codigo.charAt(0).toUpperCase() + codigo.slice(1).toLowerCase()} a Pesos`}`,      
+        },
+        data: [{
+            type: "line",
+            dataPoints: 
+                arrayFecha.map((fecha, index) => {
+                    return { label: fecha , y: arrayValor[index]}
+                }),
+            }]
+        });
+        chart2.render();
 };
 
-indicadoresApi()
+indicadoresApi();
 
