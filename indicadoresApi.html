@@ -123,16 +123,17 @@
                     </div>
                 </div>
 
-                <div class="container mt-5">
+                <div id="conversorDivisas" class="container mt-5 card">
+                    <h3 class="text-uppercase text-center mb-2">Conversor de divisas</h3>
                     <div class="row">
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="mb-3 text-warning">
+                            <div class="mb-3">
                                 <label for="ValorAConvertir" class="mb-2">Ingresa un valor:</label>
                                 <input type="number" id="ValorAConvertir" name="ValorAConvertir" class="form-control" placeholder="Ingresa un valor" pattern="[0-9]+"/>
                             </div>
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="mb-3 text-warning">
+                            <div class="mb-3">
                                 <label for="DivisaUno" class="mb-2">De:</label>
                                 <select class="form-select" id="DivisaUno" name="DivisaUno">
                                     <option value="dolar" selected>Dolar (US)</option>
@@ -144,7 +145,7 @@
                             </div>
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="mb-3 text-warning">
+                            <div class="mb-3">
                                 <label for="DivisaDos" class="mb-2">A:</label>
                                 <select class="form-select" id="DivisaDos" name="DivisaDos">
                                     <option value="CPL" selected>Peso Chileno (CPL)</option>
@@ -157,11 +158,11 @@
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col d-flex justify-content-between">
-                                    <div></div>
-                                    <div id="ResultadoConversion"></div>
-                                    <div>
-                                        <button id="botonConvertir" class="btn btn-success">Convertir</button>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-md-2"></div>
+                                    <div id="ResultadoConversion" class="col-md-8 text-center"></div>
+                                    <div class="col-md-2 text-end">
+                                        <button id="botonConvertir" class="btn btn-outline-primary">Convertir</button>
                                     </div>
                                 </div>
                             </div>
