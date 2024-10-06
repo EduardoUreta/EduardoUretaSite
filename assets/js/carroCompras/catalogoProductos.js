@@ -24,7 +24,7 @@ obtenerProductos()
                         <div class="card-header text-center">${producto.categoria}</div>
                         <div class="card-body">
                             <h4 class="tituloProducto card-title text-center">${acortarTitulo(producto.nombre)}</h4>
-                            <h5 class="card-text text-center">$${producto.precio}</h5>
+                            <h5 class="card-text text-center">$${(producto.precio).toLocaleString('es-CL')}</h5>
                             <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" style="width: 100%; height: 250px; margin-bottom: 10px;" />
 
                             <h6 class="descripcionProducto" style="font-size: 13px; display: none;">${descripcionCompleta}</h6>

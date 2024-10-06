@@ -41,7 +41,7 @@ export const burbujaCarrito = (carrito) => {
                         </div>
                     </div>
                     <div class="col-4 text-end">
-                        <h6 id="subtotalProducto-${producto.id}">$${producto.precio * producto.cantidad}</h6>
+                        <h6 id="subtotalProducto-${producto.id}">$${(producto.precio * producto.cantidad).toLocaleString('es-CL')}</h6>
                     </div>
                 </div>
                 <hr/>
@@ -58,7 +58,7 @@ export const burbujaCarrito = (carrito) => {
         <div class="container" style="height: 100px;">
             <div class="d-flex justify-content-between fw-bold">
                 <span>Total:</span>
-                <span id="totalPrecioProductos">$${totalPrecio.toFixed(2)}</span>
+                <span id="totalPrecioProductos">$${totalPrecio.toLocaleString('es-CL')}</span>
             </div>
             <div class="text-end mt-2 justify-content-between">
                 <span>
@@ -104,7 +104,7 @@ const agregarEventListenersProductos = (carrito) => {
     const actualizarTotalPrecio = () => {
         const totalPrecio = carrito.contarTotalPrecio();
         const totalPrecioProductos = document.getElementById("totalPrecioProductos");
-        totalPrecioProductos.innerHTML = `$${totalPrecio.toFixed(2)}`;
+        totalPrecioProductos.innerHTML = `$${totalPrecio.toLocaleString('es-CL')}`;
     };
 
     carrito.mostrarProductos.forEach((producto) => {
@@ -118,7 +118,7 @@ const agregarEventListenersProductos = (carrito) => {
             if (producto.cantidad > 1) {
                 carrito.disminuirCantidadProducto(producto);
                 productoCantidad.innerHTML = `${producto.cantidad}`;
-                subtotalProducto.innerHTML = `$${producto.precio * producto.cantidad}`;
+                subtotalProducto.innerHTML = `$${(producto.precio * producto.cantidad).toLocaleString('es-CL')}`;
                 disminuirCantidadProducto.innerHTML = producto.cantidad > 1 ? '-' : '<i class="fa fa-trash"></i>';
                 actualizarTituloCanvas();
                 actualizarTotalPrecio();
@@ -143,7 +143,7 @@ const agregarEventListenersProductos = (carrito) => {
                                     </div>
                                 </div>
                                 <div class="col-4 text-end">
-                                    <h6 id="subtotalProducto-${producto.id}">$${producto.precio * producto.cantidad}</h6>
+                                    <h6 id="subtotalProducto-${producto.id}">$${(producto.precio * producto.cantidad).toLocaleString('es-CL')}</h6>
                                 </div>
                             </div>
                             <hr/>
@@ -168,7 +168,7 @@ const agregarEventListenersProductos = (carrito) => {
         aumentarCantidadProducto.addEventListener('click', () => {
             carrito.aumentarCantidadProducto(producto);
             productoCantidad.innerHTML = `${producto.cantidad}`;
-            subtotalProducto.innerHTML = `$${producto.precio * producto.cantidad}`;
+            subtotalProducto.innerHTML = `$${(producto.precio * producto.cantidad).toLocaleString('es-CL')}`;
             disminuirCantidadProducto.innerHTML = '-';
             actualizarTituloCanvas();
             actualizarTotalPrecio();
