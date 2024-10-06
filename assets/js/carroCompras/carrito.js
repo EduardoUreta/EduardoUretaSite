@@ -68,7 +68,7 @@ obtenerProductos()
                             duration: 3000,
                             close: true,
                             gravity: "bottom",
-                            position: "right",
+                            position: "left",
                             stopOnFocus: true,
                             style: {
                                 background: "#8BC6EC",
@@ -89,7 +89,7 @@ obtenerProductos()
                             duration: 3000,
                             close: true,
                             gravity: "bottom",
-                            position: "right",
+                            position: "left",
                             stopOnFocus: true,
                             style: {
                                 background: "#8BC6EC",
