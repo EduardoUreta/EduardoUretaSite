@@ -20,7 +20,7 @@ export const catalogoProductos = (filtrado = []) => {
         const descripcionCorta = acortarDescripcion(producto.descripcion);
         const descripcionCompleta = producto.descripcion;
             mostarProductos.innerHTML += `
-                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center mt-3">
                     <div class="card text-dark mb-3" style="max-width: 18rem;">
                         <div class="card-header text-center">${producto.categoria}</div>
                         <div class="card-body">
@@ -42,7 +42,9 @@ export const catalogoProductos = (filtrado = []) => {
                             </h6>
                         </div>
                         <div class="card-footer text-center">
-                            <button id="${producto.id}" class="agregar-carrito btn btn-primary">Agregar al Carrito</button>
+                            <button id="${producto.id}" class="agregar-carrito btn btn-primary">
+                                AGREGAR <i class="fas fa-shopping-cart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
