@@ -146,3 +146,53 @@ botonFiltrar.addEventListener("click", () => {
 });
 
 
+// Orden
+const precioMenorMayor = document.getElementById("PrecioMenorMayor");
+const precioMayorMenor = document.getElementById("PrecioMayorMenor");
+const peorEvaluado = document.getElementById("PeorEvaluado");
+const mejorEvaluado = document.getElementById("MejorEvaluado");
+
+precioMenorMayor.addEventListener('click', () => {
+    obtenerProductos()
+    .then((data) => {
+        let ordenPrecioMenorMayor = data.sort((a,b) => {
+            return a.precio - b.precio;
+        });
+        catalogoProductos(ordenPrecioMenorMayor);
+    })
+    .catch((error) => console.error("Error al ordenar los productos:", error));
+});
+
+precioMayorMenor.addEventListener('click', () => {
+    obtenerProductos()
+    .then((data) => {
+        let ordenPrecioMayorMenor = data.sort((a, b) => {
+            return b.precio - a.precio;
+        });
+        catalogoProductos(ordenPrecioMayorMenor);
+    })
+    .catch((error) => console.error("Error al ordenar los productos:", error));
+});
+
+peorEvaluado.addEventListener('click', () => {
+    obtenerProductos()
+    .then((data) => {
+        let ordenPeorEvaluado = data.sort((a, b) => {
+            return a.valoracion - b.valoracion;
+        });
+        catalogoProductos(ordenPeorEvaluado);
+    })
+    .catch((error) => console.error("Error al ordenar los productos:", error));
+});
+
+
+mejorEvaluado.addEventListener('click', () => {
+    obtenerProductos()
+    .then((data) => {
+        let ordenMejorEvaluado = data.sort((a, b) => {
+            return b.valoracion - a.valoracion;
+        });
+        catalogoProductos(ordenMejorEvaluado);
+    })
+    .catch((error) => console.error("Error al ordenar los productos:", error));
+});
