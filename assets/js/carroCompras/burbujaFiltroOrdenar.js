@@ -15,14 +15,16 @@ let insertarValoracion = document.getElementById("InsertarValoracion");
 
 const botonFiltrar = document.getElementById("BotonFiltrar");
 
+let categoriaSeleccionada = null;
+let precioSeleccionado = null;
+let valoracionSeleccionada = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         burbujaFiltrar.style.display = "flex";
-        burbujaFiltrar.classList.add("animate__backInRight");
-        burbujaFiltrar.classList.add("animate__animated");
+        burbujaFiltrar.classList.add("animate__backInRight", "animate__animated");
         burbujaOrdenar.style.display = "flex";
-        burbujaOrdenar.classList.add("animate__backInRight");
-        burbujaOrdenar.classList.add("animate__animated");
+        burbujaOrdenar.classList.add("animate__backInRight", "animate__animated");
     }, 1000);
 });
 
@@ -56,22 +58,12 @@ botonCategorias.addEventListener("click", () => {
             });
 
             // Agregar event listeners después de haber renderizado los botones
-            let categoriaSeleccionada;
-
             buttonIds.forEach((buttonId) => {
                 const clickCategoria = document.getElementById(buttonId);
                 clickCategoria.addEventListener('click', () => {
                     categoriaSeleccionada = buttonId.replace('Click-', '');
                 });
-            });
-
-            // Filtrar por la categoría
-            botonFiltrar.addEventListener('click', () => {
-                let filtrado = data.filter(p => p.categoria == categoriaSeleccionada);
-                catalogoProductos(filtrado)
-            });
-
-            
+            });           
         })
         .catch((error) => console.error("Error al obtener productos:", error));
 });
@@ -95,19 +87,11 @@ botonPrecio.addEventListener('click', () => {
             });
 
             // Agregar event listeners después de haber renderizado los botones
-            let precioSeleccionado;
-
             precios.forEach((precio) => {
                 const clickPrecio = document.getElementById(precio);
                 clickPrecio.addEventListener('click', () => {
                     precioSeleccionado = precio;
                 });
-            });
-
-            // Filtrar por Precio
-            botonFiltrar.addEventListener('click', () => {
-                let filtrado = data.filter(p => p.precio <= precioSeleccionado);
-                catalogoProductos(filtrado)
             });
         })
         .catch((error) => console.error("Error al obtener productos:", error));
@@ -131,21 +115,34 @@ botonValoracion.addEventListener("click", () => {
 
             // Actualizar el valor visualmente cuando el usuario cambia el rango
             rangeInput.addEventListener("input", () => {
-                valorRango.textContent = rangeInput.value; // Actualiza el texto con el valor del rango
+                valorRango.textContent = rangeInput.value;
+                valoracionSeleccionada = rangeInput.value;
             });
-            
-            // Filtrar por la valoracion
-            botonFiltrar.addEventListener('click', () => {
-                const valoracion = document.getElementById("customRange2").value;
-                let filtrado = data.filter(p => p.valoracion <= valoracion);
-                catalogoProductos(filtrado)
-            });
-
         })
-
-
         .catch((error) => console.error("Error al obtener la valoracion:", error));
 });
 
+// Filtrar por las opciones
+botonFiltrar.addEventListener("click", () => {
+    obtenerProductos()
+        .then((data) => {
+            let productosFiltrados = data;
+
+            if (categoriaSeleccionada) {
+                productosFiltrados = productosFiltrados.filter(p => p.categoria === categoriaSeleccionada);
+            }
+
+            if (precioSeleccionado) {
+                productosFiltrados = productosFiltrados.filter(p => p.precio <= precioSeleccionado);
+            }
+
+            if (valoracionSeleccionada) {
+                productosFiltrados = productosFiltrados.filter(p => p.valoracion <= valoracionSeleccionada);
+            }
+
+            catalogoProductos(productosFiltrados);
+        })
+        .catch((error) => console.error("Error al filtrar productos:", error));
+});
 
 
