@@ -609,6 +609,52 @@ footer {
   transform: scale(1.1);
 }
 
+/* Burbuja Filtrar */
+#burbujaFiltrar{
+  position: fixed;
+  top: 85px;
+  right: 20px;
+  background-color: #cedeef;
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+#burbujaFiltrar i,
+#burbujaOrdenar i {
+  font-size: 20px;
+  color: black;
+}
+
+#burbujaFiltrar:hover,
+#burbujaOrdenar:hover{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+/* Burbuja Ordenar */
+#burbujaOrdenar{
+  position: fixed;
+  top: 130px;
+  right: 20px;
+  background-color: #cedeef;
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
 /* API Indicadores */
 #Indicadores{
   background-image: url('/assets/img/fondoIndicadores.png');

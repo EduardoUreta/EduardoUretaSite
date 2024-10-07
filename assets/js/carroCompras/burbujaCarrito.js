@@ -1,6 +1,6 @@
 import { acortarTituloCarrito } from "./acortarInformacion.js";
 
-const tituloCanvas = document.getElementById("offcanvasRightLabel");
+const tituloCanvas = document.getElementById("offcanvasRightLabelShop");
 const detalleCanvas = document.getElementById("detalleCanvas");
 const precioCanvas = document.getElementById("precioCanvas");
 const burbujaCarritoCatalogo = document.getElementById("burbujaCarrito");

@@ -9,15 +9,16 @@ import { burbujaCarrito } from './burbujaCarrito.js';
 const mostarProductos = document.getElementById("mostarProductos");
 
 let carrito = [];
+let todosLosProductos = [];
 
-obtenerProductos()
-    .then(data => {
-        mostarProductos.innerHTML = '';
+export const catalogoProductos = (filtrado = []) => {
+    mostarProductos.innerHTML = ''; // Limpia el catálogo
 
-        data.forEach(producto => {
-            const descripcionCorta = acortarDescripcion(producto.descripcion);
-            const descripcionCompleta = producto.descripcion;
+    const productosAFiltrar = filtrado.length > 0 ? filtrado : todosLosProductos; 
 
+    productosAFiltrar.forEach(producto => {
+        const descripcionCorta = acortarDescripcion(producto.descripcion);
+        const descripcionCompleta = producto.descripcion;
             mostarProductos.innerHTML += `
                 <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="card text-dark mb-3" style="max-width: 18rem;">
@@ -53,7 +54,7 @@ obtenerProductos()
             agregarAlCarrito.forEach(button => {
                 button.addEventListener("click", () => {
                     const productoId = button.id;
-                    const productoSeleccionado = data.find(producto => producto.id == productoId);
+                    const productoSeleccionado = productosAFiltrar.find(producto => producto.id == productoId);
 
                     if(carrito.length == 0){
                         carrito = new Carritos(productoSeleccionado)
@@ -129,6 +130,16 @@ obtenerProductos()
             });
         });      
 
-    });
+    
+};
+
+// Cuando se carga la página al principio, viene con todo
+obtenerProductos()
+    .then(data => {
+        todosLosProductos = data;
+        catalogoProductos(todosLosProductos);
+    })
+    .catch(error => console.error("Error al obtener productos:", error));
+
 
 

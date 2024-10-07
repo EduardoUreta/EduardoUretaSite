@@ -53,28 +53,111 @@
             </div>
         </nav>
 
-        <section id="CarroDeCompras" class="hero section border-bottom">
-            <div class="container" data-aos="fade-up" data-aos-delay="50">
-                <div id="mostarProductos" class="row">
-                </div>
-            </div>
+        <section>
 
-            <div id="burbujaCarrito" style="display: none;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
+        </section>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 id="offcanvasRightLabel" class="text-uppercase" style="font-weight: bold;">tus productos</h5>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <section id="CarroDeCompras" class="section border-bottom">
+
+          <div class="container">
+            <div id="mostarProductos" class="row" data-aos="fade-up" data-aos-delay="50">
+            </div>
+          </div>
+
+          <div id="burbujaCarrito" style="display: none;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightShop" aria-controls="offcanvasRightShop">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <div id="burbujaFiltrar" class="btn btn-light" style="display: none; border: 1px solid black;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightFilter" aria-controls="offcanvasRightFilter">
+            <i class="fas fa-sliders-h align-items-center"></i>
+          </div>
+
+          <div id="burbujaOrdenar" class="btn btn-light" style="display: none; border: 1px solid black;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightSort" aria-controls="offcanvasRightSort">
+            <i class="fas fa-sort"></i>
+          </div>
+
+          <!-- Canvas Burbuja Carrito -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightShop" aria-labelledby="offcanvasRightLabelShop">
+            <div class="offcanvas-header" style="background-color: #256ebc;">
+              <h5 id="offcanvasRightLabelShop" class="text-uppercase text-light" style="font-weight: bold; margin-top: 9px;
+              ">tus productos</h5>
+              <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="detalleCanvas" class="offcanvas-body">
+            </div>
+            <div id="precioCanvas" class="offcanvas-footer">
+            </div>
+          </div>
+
+          <!-- Canvas Filtro -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightFilter" aria-labelledby="offcanvasRightLabelFilter">
+            <div class="offcanvas-header" style="background-color: #256ebc;">
+              <h5 id="offcanvasRightLabelFilter" class="text-uppercase text-light text-center" style="font-weight: bold; margin-top: 9px;
+              ">Filtrar</h5>
+              <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button id="BotonCategorias" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCategory" aria-expanded="false" aria-controls="flush-collapseCategory">
+                      Categoría
+                    </button>
+                  </h2>
+                  <div id="flush-collapseCategory" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div id="InsertarCategoria" class="accordion-body text-center">
+                  
+                    </div>
+                  </div>
                 </div>
-                <div id="detalleCanvas" class="offcanvas-body">
-                  ...
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button id="BotonPrecio" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePrice" aria-expanded="false" aria-controls="flush-collapsePrice">
+                      Precio
+                    </button>
+                  </h2>
+                  <div id="flush-collapsePrice" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div id="InsertarPrecio" class="accordion-body">
+
+                    </div>
+                  </div>
                 </div>
-                <div id="precioCanvas" class="offcanvas-footer">
-                    
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button id="BotonValoracion" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeRate" aria-expanded="false" aria-controls="flush-collapseThreeRate">
+                      Valoración
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThreeRate" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div id="InsertarValoracion" class="accordion-body">
+
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div class="offcanvas-footer text-center" style="height: 100px;">
+              <hr/>
+              <button id="BotonFiltrar" class="btn btn-success">Filtrar</button>
+            </div>
+          </div>
+
+          <!-- Canvas Ordenar -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightSort" aria-labelledby="offcanvasRightLabelSort">
+            <div class="offcanvas-header" style="background-color: #256ebc;">
+              <h5 id="offcanvasRightLabelSort" class="text-uppercase text-light" style="font-weight: bold; margin-top: 9px;
+              ">Ordenar</h5>
+              <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="detalleCanvas" class="offcanvas-body">
+            </div>
+            <div class="offcanvas-footer text-center" style="height: 100px;">
+              <hr/>
+              <button class="btn btn-success">Ordenar</button>
+            </div>
+          </div>
+
+
         </section>
 
 
@@ -118,6 +201,7 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <!-- JS Propio -->
         <script type="module" src="assets/js/carroCompras/catalogoProductos.js"></script>
+        <script type="module" src="assets/js/carroCompras/burbujaFiltroOrdenar.js"></script>
 
     </body>
 </html>
