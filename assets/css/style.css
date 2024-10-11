@@ -397,6 +397,42 @@ footer {
     background-color: black;
 }
 
+/* Pokemon */
+@font-face {
+  font-family: 'PokemonSolidFont';
+  src: url('/assets/fonts/Pokemon-Font/PokemonSolid.ttf') format('truetype');
+}
+
+.pokemonSolidFont {
+  font-family: 'PokemonSolidFont', sans-serif; 
+}
+
+@font-face {
+  font-family: 'PokemonHollowFont';
+  src: url('/assets/fonts/Pokemon-Font/PokemonHollow.ttf') format('truetype');
+}
+
+.pokemonHollowFont {
+  font-family: 'PokemonHollowFont', sans-serif;
+  color: black;
+}
+
+#Pokemon{
+  background-image: url('/assets/img/fondo-pokemon.jpg');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#Pokemon .card-img-top {
+  transition: 0.3s ease-in-out;
+}
+
+#Pokemon .badge {
+  font-size: 15px;
+}
+
 
 /* Digimon */
 @font-face {

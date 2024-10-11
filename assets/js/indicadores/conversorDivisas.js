@@ -39,7 +39,7 @@ const conversorDivisas = () => {
                     if(divisaDos.value === 'CPL'){
                         const valorActualDivisaUno = data[0].valor;
                         const calculo = valorAConvertir.value * valorActualDivisaUno;
-                        resultadoConversion.innerHTML = `<h4 class="m-0" style="color: rgb(12 12 54)">$${calculo} ${divisaDos.value}</h4>`;
+                        resultadoConversion.innerHTML = `<h4 class="m-0" style="color: rgb(12 12 54)">$${(calculo.toLocaleString('es-CL'))} ${divisaDos.value}</h4>`;
                     } else {
                         const valorActualDivisaUno = data[0].valor;
                         const obtenerDatosDivisaDos = indicadoresApi(divisaDos.value);
