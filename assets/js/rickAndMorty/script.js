@@ -1,6 +1,7 @@
 import { fetchPersonajes, fetchPersonajesByUrl } from "./fetchPersonajes.js";
 import { rickMortyCard } from "./UI.js";
 import { paginacion } from "./paginacion.js";
+import { buscarPersonaje } from "./buscarPersonaje.js";
 
 const divPersonajes = document.getElementById("Personajes");
 const cargando = document.getElementById("cargando");
@@ -43,5 +44,6 @@ export const renderizarPersonajesRickMorty = async(url) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     renderizarPersonajesRickMorty('https://rickandmortyapi.com/api/character'); 
+    buscarPersonaje();
 });
   

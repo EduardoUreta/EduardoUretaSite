@@ -53,7 +53,16 @@
 
         <section id="RickMorty" class="hero section border-bottom">
           <div class="container-fluid">
-            <h1 class="text-center text-info" data-aos="fade-up" data-aos-delay="50">Personajes Rick And Morty</h1>
+            <h1 class="text-center text-info mb-5" data-aos="fade-up" data-aos-delay="50">Personajes Rick And Morty</h1>
+            <div class="container col-md-3">
+              <div class="  mb-3 text-warning" data-aos="fade-up" data-aos-delay="100">
+                <label for="nombrePersonaje" style="color: greenyellow">Busca un personaje:</label>
+                <div class="d-flex justify-content-between p-1">
+                  <input type="search" id="nombrePersonaje" name="nombrePersonaje" class="form-control" placeholder="Ingresa un personaje" pattern="[A-z]"/>
+                </div>
+              </div>
+            </div>
+
             <div class="row" id="Personajes">
 
               <div id="cargando" class="text-center mt-5 p-5" style="font-size: 35px;">
@@ -69,7 +78,7 @@
 
             </div>
 
-            <div class="container mt-5">
+            <div id="Paginacion" class="container mt-5">
               <div class="d-flex justify-content-between">
                 <div>
                   <button id="PaginaAnterior" class="btn btn-danger">Anterior</button>
