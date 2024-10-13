@@ -1,15 +1,6 @@
-fetch('https://rickandmortyapi.com/api/character')
-    .then((response) => response.json())
-    .then((data) => {
-        const personajeRickMorty = data.results;
+import { acortarNombre } from "./acortarNombre.js";
 
-        const divPersonajes = document.getElementById("Personajes");
-        if (!divPersonajes) {
-            console.error("El contenedor con ID 'Personajes' no existe.");
-            return;
-        }
-        
-        const personajesHTML = personajeRickMorty.map(personaje => {
+export const rickMortyCard = (value) => {
             return `
             <div class="col-lg-6 col-md-6 col-sm-12 card m-auto m-0 justify-content-center text-center mt-5 animate__animated">
                 <div class="license-card" data-aos="fade-up" data-aos-delay="100">
@@ -18,30 +9,37 @@ fetch('https://rickandmortyapi.com/api/character')
                     </div>
                     <div class="card-body d-flex flex-column flex-md-row align-items-center">
                         <div class="photo-section d-flex flex-column align-items-center mb-3 mb-md-0">
-                            <img id="${personaje.id}" class="photo img-fluid rounded-circle" src="${personaje.image}" alt="${personaje.name}">
+                            <img id="${value.id}" class="photo img-fluid rounded-circle" src="${value.image}" alt="${value.name}">
                         </div>
                         <div class="info-section w-100 w-md-75 ms-md-4 text-start">
-                            <h4 class="mt-2 text-center">${personaje.name}</h4>
-                            <div class="info-group">
-                                <label>Género:</label>
-                                <span>${
-                                    personaje.gender === 'Male' ? 'Hombre' :
-                                    personaje.gender === 'Female' ? 'Mujer' :
-                                    personaje.gender
-                                }</span>
+                            <h4 class="mt-2 text-center">${acortarNombre(value.name)}</h4>
+                            <div class="info-group justify-content-center">
+                                <label>Género:
+                                    <span>${
+                                        value.gender === 'Male' ? 'Hombre' :
+                                        value.gender === 'Female' ? 'Mujer' :
+                                        value.gender}
+                                    </span>
+                                </label>
+
                             </div>
-                            <div class="info-group">
-                                <label>Capítulos:</label>
-                                <span>${personaje.episode?.length || 'Desconocido'}</span>
+                            <div class="info-group justify-content-center">
+                                <label>Capítulos:
+                                    <span>
+                                        ${value.episode?.length || 'Desconocido'}
+                                    </span>
+                                </label>
                             </div>
-                            <div class="info-group">
-                                <label>Estado:</label>
-                                <span>${
-                                    personaje.status === 'Alive' ? 'Vivo' :
-                                    personaje.status === 'Dead' ? 'Muerto' :
-                                    personaje.status === 'unknown' ? 'Desconocido' :
-                                    personaje.status
-                                }</span>
+                            <div class="info-group justify-content-center">
+                                <label>Estado:
+                                    <span>${
+                                    value.status === 'Alive' ? 'Vivo' :
+                                    value.status === 'Dead' ? 'Muerto' :
+                                    value.status === 'unknown' ? 'Desconocido' :
+                                    value.status}
+                                    </span>
+                                </label>
+                                
                             </div>
                         </div>
                     </div>
@@ -67,8 +65,4 @@ fetch('https://rickandmortyapi.com/api/character')
                     </div>
                 </div>
             </div>`;
-            }).join('');
-        
-        divPersonajes.innerHTML = personajesHTML;
-    })
-    .catch(error => console.error('Error al obtener los datos:', error));
+        };
