@@ -583,6 +583,24 @@ footer {
     margin-left: 20px;
 }
 
+/* Star Wars */
+@font-face {
+  font-family: 'StarWarsFont';
+  src: url('/assets/fonts/Star-Wars-Font/Starjedi.ttf') format('truetype');
+}
+
+.starWarsFont {
+  font-family: 'StarWarsFont', sans-serif;
+}
+
+#StarWars{
+  background-image: url('/assets/img/fondoStarWars.jpeg');
+  background-size: cover;        
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Feriados */
 #Feriados {
   background-image: url('/assets/img/fondoFeriado.png');
