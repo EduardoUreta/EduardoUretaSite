@@ -58,18 +58,12 @@ const generadores = {
     doceDiecisiete: { value: null },
 };
 
-cardsUnoCinco.addEventListener("mouseenter", () => {
-    setTimeout(() => {
-        manejarClick(cardsUnoCinco, mostrarCardUnoCinco, generadores.unoCinco, 'https://swapi.dev/api/people/');
-    }, 1000)
+cardsUnoCinco.addEventListener("click", () => {
+    manejarClick(cardsUnoCinco, mostrarCardUnoCinco, generadores.unoCinco, 'https://swapi.dev/api/people/');
 });
-cardsSeisOnce.addEventListener("mouseenter", () => {
-    setTimeout(() => {
-        manejarClick(cardsSeisOnce, mostrarCardSeisOnce, generadores.seisOnce, 'https://swapi.dev/api/people/');
-    }, 1000)
+cardsSeisOnce.addEventListener("click", () => {
+    manejarClick(cardsSeisOnce, mostrarCardSeisOnce, generadores.seisOnce, 'https://swapi.dev/api/people/');
 });
-cardsDoceDiecisiete.addEventListener("mouseenter", () => {
-    setTimeout(() => {
-        manejarClick(cardsDoceDiecisiete, mostrarCardDoceDiecisiete, generadores.doceDiecisiete, 'https://swapi.dev/api/people/?page=2');
-    }, 1000)
+cardsDoceDiecisiete.addEventListener("click", () => {
+    manejarClick(cardsDoceDiecisiete, mostrarCardDoceDiecisiete, generadores.doceDiecisiete, 'https://swapi.dev/api/people/?page=2');
 });

@@ -1,6 +1,6 @@
 export const card = (personaje) => {
     return `
-        <div class="col-md-4 align-content-center"> 
+        <div class="col-md-4 align-content-center mt-1 mb-1"> 
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title mb-3 text-warning">${personaje.name}</h5>
